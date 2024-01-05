@@ -1,0 +1,42 @@
+.bookDescription{
+   font-family:Arial, Helvetica, sans-serif;
+  margin-top: 60px;
+  background-color: #ffff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.itemImage{
+   width: 700px;
+   height: 350px;
+   border-radius: 8px;
+}
+
+.authorImg{
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+}
+
+
+.authorDescription{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.authorName{
+   display: flex;
+   align-items: center;
+}
+
+.author{
+   margin-left: 24px;
+}
+
+.programming{
+   color: blue;
+   
+}
+

@@ -1,0 +1,36 @@
+.header-container{
+   display: flex;
+   justify-content: space-around;
+   align-items: center;
+   font-family: Arial, Helvetica, sans-serif;
+}
+
+.header-container h1{
+font-size:30px;
+}
+
+.header-container a{
+   text-decoration: none;
+   margin-right: 20px;
+}
+
+.header-container a:hover{
+   text-decoration: underline;
+   color: rgb(241, 191, 98);
+}
+
+.nev-menu {
+  display: flex;
+  align-items: center;
+}
+
+.nev-menu img{
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+hr{
+   background-color: rgb(226, 221, 221);
+   width: 1280px;
+}
