@@ -5,7 +5,7 @@ import image from '../../img/img.jpg'
 
 const Header = () => {
    return (
-      <div>
+      <div className='superHead'>
          <nav className='header-container'>
             <h1>Knowledge Cafe</h1>
             <div className='nev-menu'>

@@ -1,0 +1,30 @@
+.cartContainer{
+   position: sticky;
+   top: 120px;
+   font-family:Arial, Helvetica, sans-serif
+}
+
+.readingTime{
+   color: #664eed;
+   background-color: #e3e1eb;
+   border: 1px solid rgb(203, 194, 194);
+   border-radius: 5px;
+   text-align: center;
+   margin-bottom: 20px;
+}
+
+.itemDetails{
+   background-color: #e3e1eb;
+   border: 1px solid rgb(203, 194, 194);
+   border-radius: 5px;
+   text-align: center;
+   padding: 0px 15px;
+}
+
+.itemName{
+   background-color: white;
+   border: 1px solid white;
+   text-align: center;
+   padding: 10px;
+   border-radius: 5px;
+}

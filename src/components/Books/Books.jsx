@@ -1,5 +1,6 @@
+/* eslint-disable react/prop-types */
 // eslint-disable-next-line no-unused-vars
-import React from 'react';
+import React, { useState } from 'react';
 import './Books.css'
 // eslint-disable-next-line no-unused-vars
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -7,18 +8,12 @@ import { faBookBookmark } from '@fortawesome/free-solid-svg-icons';
 
 
 const Books = (props) => {
-
-   // function myFunction() {
-   //    alert("I am an alert box!");
-   // }
-
-   const myFunction = () =>{
-      // eslint-disable-next-line react/prop-types
-      console.log(props.book.author)
-   }
-
-   // eslint-disable-next-line react/prop-types
+   // console.log(props.book)
    const {cover_photo, author_img, item_name, time, author} = props.book
+   const handelAddToCart = props.handelAddToCart;
+   // console.log(handelAddToCart);
+   
+
    // console.log(props.book)
    return (
       <div className='bookDescription'>
@@ -27,6 +22,7 @@ const Books = (props) => {
          <div className='authorDescription'>
             <div className='authorName'>
                <img className='authorImg' src={author_img} alt="authorImage" />
+           
                <div className='author'>
                   <h3>{author}</h3>
                   <p>June 14 (10 days ago)</p>
@@ -34,7 +30,7 @@ const Books = (props) => {
             </div>
          
             <div>
-               <p>{time} min to read <FontAwesomeIcon onClick={()=> myFunction()} icon={faBookBookmark} /></p>
+               <p>{time} min to read <FontAwesomeIcon onClick={() => handelAddToCart(props.book)} icon={faBookBookmark} /></p>
             </div>
             
          </div>

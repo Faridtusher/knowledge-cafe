@@ -7,25 +7,30 @@ import Cart from '../Cart/Cart';
 const Library = () => {
    const [books, setBooks] = useState([]);
    useEffect(() =>{
-      fetch('../../../public/data.json')
+      fetch('data.json')
       .then(res => res.json())
       .then(data => setBooks(data))
    }, [])
+
+   const [cart, setCart] = useState([]);
+   const handelAddToCart = (product) =>{
+      const newCart = [...cart, product]
+      setCart(newCart)
+   }
+   
    
    return (
       <div className='bookContainer'>
          <div className='featuresBook'>
             {
-              
-               books.map(book => <Books book={book} key={book.id}></Books>)
+               books.map(book => <Books book={book} handelAddToCart={handelAddToCart} key={book.id}></Books>)
             }
          </div>
 
 
          <div className='cartContainer'>
-            <Cart></Cart>
+            <Cart cart={cart}></Cart>
          </div>
-         
       </div>
    );
 };
