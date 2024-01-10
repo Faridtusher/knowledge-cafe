@@ -13,11 +13,11 @@ const Library = () => {
    }, [])
 
    const [cart, setCart] = useState([]);
-   const handelAddToCart = (product) =>{
-      const newCart = [...cart, product]
+   const handelAddToCart = (book) =>{
+      const newCart = [...cart, book]
       setCart(newCart)
    }
-   
+
    
    return (
       <div className='bookContainer'>
@@ -26,7 +26,6 @@ const Library = () => {
                books.map(book => <Books book={book} handelAddToCart={handelAddToCart} key={book.id}></Books>)
             }
          </div>
-
 
          <div className='cartContainer'>
             <Cart cart={cart}></Cart>

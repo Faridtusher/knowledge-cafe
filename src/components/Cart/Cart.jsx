@@ -4,25 +4,28 @@ import React from 'react';
 import './Cart.css'
 
 const Cart = (props) => {
-   const cart = props.cart;
-   console.log(cart)
+   const cart = props.cart
+   let itemName = '';
+   let totalTime = 0;
 
-   let itemName = ' ';
-   let readingTime =0;
-   for(const book of cart){
-      itemName = itemName + book.item_name;
-      readingTime = readingTime + book.time;
+   for(const item of cart){
+      itemName = itemName + item.item_name + '\n';
+      totalTime = totalTime + item.time;
    }
    
    return (
       <div className='cartContainer'>
          <div className='readingTime'>
-            <h4>Total Reading Time : {readingTime} min</h4>
+            <h4>Total Reading Time : {totalTime} min</h4>
          </div>
-
+         
          <div className='itemDetails'>
             <h3>Bookmark Blog : {cart.length}</h3>
-            <p className='itemName'>{itemName}</p>
+            <p>
+               {
+                  itemName.split('\n').map((nameOfItem, index) => <p className='itemName' key={index}>{nameOfItem}</p>)
+               }
+            </p>
          </div>  
       </div>
    );
